@@ -1,0 +1,14 @@
+# No subir el entorno virtual
+contador/
+
+# Cosas típicas de Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.env
+.venv/
+venv/
+key.json
+.env
+.contador*/

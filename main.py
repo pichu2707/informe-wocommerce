@@ -10,7 +10,7 @@ import gspread
 
 load_dotenv()
 
-def get_data_from_url(url: str):
+def get_data_from_url(url: str) -> dict:
     """Realiza la solicitud GET y defvuelve los datos JSON si es tiene éxito
 
     Args:
@@ -22,7 +22,7 @@ def get_data_from_url(url: str):
     else:
         raise Exception(f"Error al obtener los datos: {response.status_code}  - {response.text}")
     
-def process_data(data):
+def process_data(data: dict) -> pd.DataFrame:
     """Procesa los datos JSON y devuelve un DataFrame listo para escribir en GSheets."""
     contador_productos = Counter()
     nombres_productos = {}
@@ -51,7 +51,7 @@ def process_data(data):
 
     return pd.DataFrame(resultados)
 
-def update_google_sheets(df, sheet_id, worksheet_name, creds_file):
+def update_google_sheets(df: pd.DataFrame, sheet_id: str, worksheet_name: str, creds_file: str) -> None:
     """Actualiza una hoja de Google Sheets con un DataFrame"""
     SCOPES=[
             "https://www.googleapis.com/auth/spreadsheets",

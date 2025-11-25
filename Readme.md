@@ -37,6 +37,7 @@ Para instalar la librerías únicamente necesitas hacer ```pip install -r requir
 
 ### Consejo
 
-Es aconsejable crear un entorno virtual para hacer estas tareas
+Es aconsejable crear un entorno virtual para hacer estas tareas.
+También sería aconsjable la creación de un cron para poder hacer estas peticiones de manera automática en el tiempo o bien utilizar las **actions** de GitHub para hacerlo de manera automática.
 
 ```pip install -m venv (nombre del entorno virtual)```
